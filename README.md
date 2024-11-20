@@ -33,7 +33,7 @@ El objetivo final es proporcionar estrategias basadas en datos para mejorar las 
 
 2. DATOS RELEVANTES, DESCRIPCION Y REVISION DE LOS INSUMOS
 
-Por tanto, iniciando de lo más básico, en la tabla número 1, se describen los datos y el contenido de los tres Data Set que han sido proporcionados para proyecto.
+A continuación se describen los datos y el contenido de los tres Data Set que han sido proporcionados para proyecto.
 
 2.1 Descripción del contenido
 
@@ -63,12 +63,14 @@ Este dataset contiene registros de ventas, con los siguientes campos:
 
 
 2.2 Relevancia de cada Data Set
+
 Clientes:
 Este dataset es crucial para entender quiénes son los clientes de la empresa. Es la base para cualquier análisis de comportamiento del cliente, segmentación de mercado, y estrategias de marketing personalizadas.
 Productos:
 Es fundamental para el análisis de inventarios, planificación de estrategias de precios, y análisis de ventas por categoría de producto.
 Ventas:
 Este dataset es esencial para el análisis de rendimiento de ventas, tendencias de compra, y evaluación del impacto de las campañas de marketing.
+
 
 2.3 Hallazgos Clave y Errores a Revisar
 
@@ -86,6 +88,7 @@ Ventas:
 Fechas Inválidas: Verificar que todas las fechas sean válidas y en el formato correcto.
 Inconsistencias en IDs: Asegurar que ClienteID y ProductoID correspondan a registros válidos en los otros datasets.
 Regiones Correctas: Verificar que las regiones sean válidas y consistentes.
+
 
 2.4 Insights y Apreciaciones
 
@@ -160,6 +163,7 @@ Para generar el diagrama se utilizó el lenguaje DBML (Database Markup Language)
 
 https://dbdiagram.io/d/PROYECTO_FINAL-673c1b28e9daa85acaea168c
 
+El codigo DBML seria el siguiente:
 
 Table clientes {
     ClienteID int [pk, not null]
@@ -184,6 +188,7 @@ Table ventas {
     FechaVenta date
     Region varchar(50)
 }
+
 
 3.2 Implementación en el DBMS
 
@@ -257,6 +262,7 @@ GO
 4. EXTRACCION Y MANIPULACION DE DATOS
    
 4.1 Importación de datos
+
 SQL Server ofrece un asistente de Importación y Exportación para cargar datos desde archivos CSV a las tablas de SQL Server.
 Abrir SQL Server Management Studio (SSMS).
 Conectarse a la instancia de SQL Server.
@@ -283,6 +289,7 @@ Limpieza de Datos: Asegúrate de eliminar duplicados, manejar valores nulos y co
 Integridad Referencial: Garantizar que todas las llaves foráneas correspondan a registros válidos en sus tablas de origen.
 Normalización: Mantener una estructura de datos normalizada para evitar redundancias y asegurar un almacenamiento eficiente.
 Indexación: Crear índices en las columnas utilizadas frecuentemente en las consultas para mejorar el rendimiento.
+
 
 4.2 Consultas SQL para Extracción de Información
 
