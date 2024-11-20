@@ -90,26 +90,6 @@ Inconsistencias en IDs: Asegurar que ClienteID y ProductoID correspondan a regis
 Regiones Correctas: Verificar que las regiones sean válidas y consistentes.
 
 
-2.4 Insights y Apreciaciones
-
-Clientes:
-Segmentación de Clientes: Se puede segmentar a los clientes por ubicación, para personalizar campañas de marketing regionales.
-Preferencias de Contacto: Identificar las preferencias de contacto de los clientes (email vs. teléfono).
-Eficiencia del Marketing: Evaluar la efectividad de las campañas de marketing mediante la correspondencia de clientes con registros de ventas.
-
-Productos:
-Análisis de Categorías: Determinar qué categorías de productos son más populares y generan más ingresos.
-Optimización de Precios: Identificar oportunidades para ajustar precios con base en la demanda.
-Gestión de Inventarios: Ayudar en la planificación de inventarios según la popularidad y la rotación de productos.
-
-Ventas: 
-Tendencias de Venta: Identificar las tendencias de ventas a lo largo del tiempo y por región.
-Análisis de Clientes: Determinar los clientes más valiosos y sus comportamientos de compra.
-Estrategias de Venta: Evaluar el desempeño de estrategias de ventas en diferentes regiones y ajustar en consecuencia.
-
-
-
-
 ###################################################################
 
 3. DISEÑO DE LA BASE DE DATOS
