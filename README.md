@@ -281,6 +281,7 @@ Verificar que las tablas estén pobladas
 SELECT * FROM clientes;
 SELECT * FROM productos;
 SELECT * FROM ventas;
+
 Como buenas prácticas, durante y posteriormente a la importación de datos se recomienda aplicar estos controles:
 Limpieza de Datos: Asegúrate de eliminar duplicados, manejar valores nulos y corregir errores en los datos.
 Integridad Referencial: Garantizar que todas las llaves foráneas correspondan a registros válidos en sus tablas de origen.
@@ -289,9 +290,10 @@ Indexación: Crear índices en las columnas utilizadas frecuentemente en las con
 
 4.2 Consultas SQL para Extracción de Información
 
-La siguientes, son consultas SQL para extraer la información solicitada, basadas en los datos de los datasets y el procedimiento de importación descritos anteriormente:
+La siguientes, son consultas SQL para extraer la información solicitada, basadas en los datos de los datasets y el procedimiento de importación descritos anteriormente.
 
-1. Ventas Totales por Categoría de Producto (ventas_totales_por_categoria.sql)
+4.2.1. Ventas Totales por Categoría de Producto (ventas_totales_por_categoria.sql):
+   
 Esta consulta calcula la suma de las ventas agrupadas por categoría de producto.
 
 SELECT 
@@ -304,8 +306,10 @@ JOIN
 GROUP BY 
     p.Categoria;
 
-2. Clientes con Mayor Valor de Compra (clientes_mayor_valor_compra.sql)
+4.2.2. Clientes con Mayor Valor de Compra (clientes_mayor_valor_compra.sql):
+   
 Esta consulta calcula el total gastado por cada cliente y ordena los resultados de mayor a menor.
+
 SELECT 
     c.ClienteID,
     c.NombreCliente,
@@ -320,7 +324,9 @@ GROUP BY
     c.ClienteID, c.NombreCliente
 ORDER BY 
     TotalGastado DESC;
-3. Productos Más Vendidos por Región (productos_mas_vendidos_por_region.sql)
+   
+4.2.3. Productos Más Vendidos por Región (productos_mas_vendidos_por_region.sql):
+   
 Esta consulta determina los productos más populares en cada región, basándose en la cantidad total vendida.
 
 SELECT 
