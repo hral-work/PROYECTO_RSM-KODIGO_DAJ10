@@ -27,6 +27,8 @@ Preparar un informe escrito y una presentación para resumir los hallazgos, mét
 El objetivo final es proporcionar estrategias basadas en datos para mejorar las ventas del cliente.
 
 
+
+
 ###################################################################
 
 2. DATOS RELEVANTES, DESCRIPCION Y REVISION DE LOS INSUMOS
@@ -101,6 +103,9 @@ Ventas:
 Tendencias de Venta: Identificar las tendencias de ventas a lo largo del tiempo y por región.
 Análisis de Clientes: Determinar los clientes más valiosos y sus comportamientos de compra.
 Estrategias de Venta: Evaluar el desempeño de estrategias de ventas en diferentes regiones y ajustar en consecuencia.
+
+
+
 
 ###################################################################
 
@@ -255,6 +260,9 @@ CREATE TABLE ventas (
   FOREIGN KEY (ProductoID) REFERENCES productos (ProductoID)
 );
 GO
+
+
+
 
 ###################################################################
 
