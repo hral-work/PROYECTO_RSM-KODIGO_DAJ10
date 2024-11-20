@@ -156,18 +156,6 @@ Cardinalidad: Definida por las relaciones 1:N, ya que un cliente puede tener mú
 
 Diagrama Visual
 
-+-------------------+         +-------------------+         +-------------------+
-|     clientes      |         |      ventas       |         |     productos     |
-+-------------------+         +-------------------+         +-------------------+
-| - ClienteID       |<---+    | - VentaID         |    +--->| - ProductoID      |
-| - NombreCliente   |    +---<| - ClienteID       |    |    | - NombreProducto  |
-| - Email           |         | - ProductoID      |>---+    | - Categoria       |
-| - Telefono        |         | - Cantidad        |         | - PrecioUnitario  |
-| - Direccion       |         | - FechaVenta      |         +-------------------+
-+-------------------+         | - Region          |
-                              +-------------------+
-
-
 Para generar el diagrama se utilizó el lenguaje DBML (Database Markup Language):
 
 https://dbdiagram.io/d/PROYECTO_FINAL-673c1b28e9daa85acaea168c
