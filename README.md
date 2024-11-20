@@ -4,30 +4,14 @@
 
 Como proyecto final, los alumnos del bootcamp tienen que realizar un proyecto que consiste en optimizar las ventas de una tienda en línea mediante el análisis de datos, se debe diseñar una base de datos y analizar la información de ventas, clientes y productos. 
 
-El proyecto se divide en varias fases, como se indica a continuación:
-
-Diseño de Base de Datos: 
-Crear un diagrama entidad-relación (ERD), definir atributos clave y relaciones, y transformar el ERD en sentencias SQL para implementar las tablas en un DBMS.
-
-Extracción y Manipulación de Datos: 
-Importar datos de archivos CSV a la base de datos, realizar validaciones y escribir consultas SQL para obtener información relevante.
-
-Análisis Exploratorio de Datos: 
-Usar estadísticas descriptivas y técnicas de análisis para identificar patrones, tendencias y anomalías en las ventas.
-
-Creación de Dashboard: 
-Desarrollar un dashboard interactivo en Power BI para visualizar KPIs, tendencias de ventas, y análisis de cestas de compra.
-
-Modelo Predictivo (Opcional): 
-Construir y evaluar un modelo de machine learning para prever tendencias de ventas futuras.
-
-Reporte y Presentación: 
-Preparar un informe escrito y una presentación para resumir los hallazgos, métodos utilizados y recomendaciones basadas en el análisis de datos. Además, se incluyen buenas prácticas de codificación y optimización de consultas SQL, así como la documentación y entrega del proyecto en GitHub.
-
+El proyecto se divide en varias fases, como se indica a continuación.
+Diseño de Base de Datos.
+Extracción y Manipulación de Datos.
+Análisis Exploratorio de Datos.
+Creación de Dashboard.
+Modelo Predictivo (Opcional).
+Reporte y Presentación.
 El objetivo final es proporcionar estrategias basadas en datos para mejorar las ventas del cliente.
-
-
-
 
 ###################################################################
 
@@ -39,55 +23,22 @@ A continuación se describen los datos y el contenido de los tres Data Set que h
 
 Data Set Clientes
 Este dataset contiene información sobre los clientes de una empresa, con los siguientes campos:
-• ClienteID: Identificador único del cliente.
-• NombreCliente: Nombre del cliente.
-• Email: Correo electrónico del cliente.
-• Telefono: Número de teléfono del cliente.
-• Direccion: Dirección del cliente.
 
 Data Set Productos
 Este dataset incluye información sobre los productos ofrecidos por la empresa:
-• ProductoID: Identificador único del producto.
-• NombreProducto: Nombre del producto.
-• Categoria: Categoría a la que pertenece el producto.
-• PrecioUnitario: Precio unitario del producto.
 
 Data Set Ventas
 Este dataset contiene registros de ventas, con los siguientes campos:
-• VentaID: Identificador único de la venta.
-• ClienteID: Identificador del cliente que realizó la compra.
-• ProductoID: Identificador del producto comprado.
-• Cantidad: Cantidad del producto comprado.
-• FechaVenta: Fecha en que se realizó la venta.
-• Region: Región donde se realizó la venta.
-
 
 2.2 Relevancia de cada Data Set
 
-Clientes:
-Este dataset es crucial para entender quiénes son los clientes de la empresa. Es la base para cualquier análisis de comportamiento del cliente, segmentación de mercado, y estrategias de marketing personalizadas.
-Productos:
-Es fundamental para el análisis de inventarios, planificación de estrategias de precios, y análisis de ventas por categoría de producto.
-Ventas:
-Este dataset es esencial para el análisis de rendimiento de ventas, tendencias de compra, y evaluación del impacto de las campañas de marketing.
+Clientes: Este dataset es crucial para entender quiénes son los clientes de la empresa. Es la base para cualquier análisis de comportamiento del cliente, segmentación de mercado, y estrategias de marketing personalizadas.
+Productos: Es fundamental para el análisis de inventarios, planificación de estrategias de precios, y análisis de ventas por categoría de producto.
+Ventas: Este dataset es esencial para el análisis de rendimiento de ventas, tendencias de compra, y evaluación del impacto de las campañas de marketing.
 
 
 2.3 Hallazgos Clave y Errores a Revisar
-
-Clientes:
-Duplicados: Verificar si hay clientes duplicados, especialmente en el campo Email o Teléfono.
-Campos Vacíos o Nulos: Revisar que todos los campos estén completos.
-Formatos: Asegurar que los correos electrónicos y números de teléfono tengan el formato correcto.
-
-Productos:
-Precios Negativos o Inválidos: Verificar que todos los precios sean positivos y válidos.
-Categorías Correctas: Asegurar que cada producto esté correctamente categorizado.
-Duplicados: Revisar que no haya productos duplicados.
-
-Ventas:
-Fechas Inválidas: Verificar que todas las fechas sean válidas y en el formato correcto.
-Inconsistencias en IDs: Asegurar que ClienteID y ProductoID correspondan a registros válidos en los otros datasets.
-Regiones Correctas: Verificar que las regiones sean válidas y consistentes.
+Esto lo podemos encontrar el documento de informe del proyecto bajo la seccion 2.3 donde amplian todos esto datos.
 
 
 ###################################################################
