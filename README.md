@@ -22,23 +22,26 @@ A continuación se describen los datos y el contenido de los tres Data Set que h
 2.1 Descripción del contenido
 
 Data Set Clientes
-Este dataset contiene información sobre los clientes de una empresa, con los siguientes campos:
+Este dataset contiene información sobre los clientes de una empresa.
 
 Data Set Productos
-Este dataset incluye información sobre los productos ofrecidos por la empresa:
+Este dataset incluye información sobre los productos ofrecidos.
 
 Data Set Ventas
-Este dataset contiene registros de ventas, con los siguientes campos:
+Este dataset contiene registros de ventas.
 
 2.2 Relevancia de cada Data Set
 
 Clientes: Este dataset es crucial para entender quiénes son los clientes de la empresa. Es la base para cualquier análisis de comportamiento del cliente, segmentación de mercado, y estrategias de marketing personalizadas.
+
 Productos: Es fundamental para el análisis de inventarios, planificación de estrategias de precios, y análisis de ventas por categoría de producto.
+
 Ventas: Este dataset es esencial para el análisis de rendimiento de ventas, tendencias de compra, y evaluación del impacto de las campañas de marketing.
 
 
-2.3 Hallazgos Clave y Errores a Revisar
-Esto lo podemos encontrar el documento de informe del proyecto bajo la seccion 2.3 donde amplian todos esto datos.
+2.3 Hallazgos Clave y Errores a Revisar.
+
+Estos son procesos con herramientas básicas como editor de texto, excel y otros, en el documento de informe del proyecto bajo la seccion con éste mismo nombre podemos encontrar mas información donde se amplian todos esto datos.
 
 
 ###################################################################
@@ -46,23 +49,27 @@ Esto lo podemos encontrar el documento de informe del proyecto bajo la seccion 2
 3. DISEÑO DE LA BASE DE DATOS
    
 3.1 Diagrama Entidad-Relación
-Para la creación del diagrama entidad-relación (ERD) con base en los datasets proporcionados ("clientes", "productos" y "ventas"), identificamos las entidades principales, sus atributos, y las relaciones entre ellas. A continuación, se detalla cómo se puede construir el ERD y qué elementos clave se deben considerar.
+
+Para la creación del diagrama entidad-relación (ERD) con base en los datasets proporcionados ("clientes", "productos" y "ventas"), identificamos las entidades principales, sus atributos, y las relaciones entre ellas. 
+
+A continuación, se detalla cómo se puede construir el ERD y qué elementos clave se deben considerar.
+
 Entidades y Atributos
 
-Clientes
+Tabla Clientes
 ClienteID (llave primaria)
 NombreCliente
 Email
 Telefono
 Direccion
 
-Productos
+Tabla Productos
 ProductoID (llave primaria)
 NombreProducto
 Categoria
 PrecioUnitario
 
-Ventas
+Tabla Ventas
 VentaID (llave primaria)
 ClienteID (llave foránea)
 ProductoID (llave foránea)
@@ -70,19 +77,20 @@ Cantidad
 FechaVenta
 Region
 
-Relaciones
-
 Relación entre Clientes y Ventas:
+
 Un cliente puede tener asociadas muchas ventas.
 Cardinalidad: Uno a Muchos (1:N) desde Clientes a Ventas.
 ClienteID en la tabla Ventas es una llave foránea que referencia a ClienteID en la tabla Clientes.
 
 Relación entre Productos y Ventas:
+
 Un producto puede estar asociado con muchas ventas.
 Cardinalidad: Uno a Muchos (1:N) desde Productos a Ventas.
 ProductoID en la tabla Ventas es una llave foránea que referencia a ProductoID en la tabla Productos.
 
 Llaves y Cardinalidad
+
 Llaves Primarias: ClienteID en Clientes, ProductoID en Productos, y VentaID en Ventas son llaves primarias que identifican de manera única a cada registro en sus respectivas tablas.
 Llaves Foráneas: ClienteID y ProductoID en la tabla Ventas son llaves foráneas que crean relaciones entre las tablas, permitiendo la integridad referencial y conexiones lógicas entre datos.
 Cardinalidad: Definida por las relaciones 1:N, ya que un cliente puede tener múltiples ventas y un producto puede ser vendido en múltiples transacciones.
@@ -124,7 +132,9 @@ Table ventas {
 3.2 Implementación en el DBMS
 
 Previo al análisis y normalización de datos es necesario que se ejecute la creación de la base de datos y tablas, una vez lista esa parte, se procede a cargar la información de los Data Sets en el ambiente habilitado.
+
 Se decidió utilizar como motor de base datos SQLServer 2019 por la facilidad que se tiene en cuanto a disponibilidad y acceso al uso de un ambiente de desarrollo.
+
 Los pasos requeridos en esta fase pueden resumirse así:
 Crear la Base de Datos: Crear la base de datos RSMDB.
 Crear Usuario y Roles: Crear un usuario rsmuser y asignarle roles de lectura y escritura.
@@ -195,36 +205,37 @@ GO
 4.1 Importación de datos
 
 SQL Server ofrece un asistente de Importación y Exportación para cargar datos desde archivos CSV a las tablas de SQL Server.
-Abrir SQL Server Management Studio (SSMS).
-Conectarse a la instancia de SQL Server.
+
+-Abrir SQL Server Management Studio (SSMS).
+
+-Conectarse a la instancia de SQL Server.
 Hacer clic derecho en la base de datos RSMDB y seleccionar Tasks -> Import Data.
 Elegir el origen de datos:
 Source: Flat File Source
 File name: Seleccionamos el archivo CSV correspondiente (clientes.csv, productos.csv, o ventas.csv).
-Configuramos los delimitadores y otros parámetros según sea necesario.
-Elegir el destino de datos:
+
+-Configuramos los delimitadores y otros parámetros según sea necesario.
+
+-Elegir el destino de datos:
 Destination: SQL Server Native Client
 Server name: SQLSRV.
 Database: RSMDB.
 Configurar las opciones de mapeo de columnas para asegurar que las columnas de los archivos CSV correspondan correctamente a las columnas de las tablas SQL.
-Ejecutar el proceso de importación.
 
-Una vez que los datos se hayan importado, verifica que estén correctamente cargados ejecutando algunas consultas básicas en la base de datos:
-Verificar que las tablas estén pobladas
+-Ejecutar el proceso de importación.
+
+Una vez que los datos se hayan importado, verificamos que estén correctamente cargados ejecutando algunas consultas básicas en la base de datos.
+
+Verificar que las tablas estén pobladas:
 SELECT * FROM clientes;
 SELECT * FROM productos;
 SELECT * FROM ventas;
-
-Como buenas prácticas, durante y posteriormente a la importación de datos se recomienda aplicar estos controles:
-Limpieza de Datos: Asegúrate de eliminar duplicados, manejar valores nulos y corregir errores en los datos.
-Integridad Referencial: Garantizar que todas las llaves foráneas correspondan a registros válidos en sus tablas de origen.
-Normalización: Mantener una estructura de datos normalizada para evitar redundancias y asegurar un almacenamiento eficiente.
-Indexación: Crear índices en las columnas utilizadas frecuentemente en las consultas para mejorar el rendimiento.
 
 
 4.2 Consultas SQL para Extracción de Información
 
 La siguientes, son consultas SQL para extraer la información solicitada, basadas en los datos de los datasets y el procedimiento de importación descritos anteriormente.
+
 
 4.2.1. Ventas Totales por Categoría de Producto (ventas_totales_por_categoria.sql):
    
@@ -239,6 +250,7 @@ JOIN
     productos p ON v.ProductoID = p.ProductoID
 GROUP BY 
     p.Categoria;
+
 
 4.2.2. Clientes con Mayor Valor de Compra (clientes_mayor_valor_compra.sql):
    
@@ -258,7 +270,8 @@ GROUP BY
     c.ClienteID, c.NombreCliente
 ORDER BY 
     TotalGastado DESC;
-   
+ 
+  
 4.2.3. Productos Más Vendidos por Región (productos_mas_vendidos_por_region.sql):
    
 Esta consulta determina los productos más populares en cada región, basándose en la cantidad total vendida.
