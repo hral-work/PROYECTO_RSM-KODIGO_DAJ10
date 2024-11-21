@@ -102,31 +102,9 @@ Para generar el diagrama se utilizó el lenguaje DBML (Database Markup Language)
 
 https://dbdiagram.io/d/PROYECTO_FINAL-673c1b28e9daa85acaea168c
 
-El codigo DBML seria el siguiente:
+El codigo DBML se encuentra dentro de la carpeta 1_DISEÑO_DB:
 
-Table clientes {
-    ClienteID int [pk, not null]
-    NombreCliente varchar(255)
-    Email varchar(255)
-    Telefono varchar(50)
-    Direccion varchar(255)
-}
-
-Table productos {
-    ProductoID int [pk, not null]
-    NombreProducto varchar(255)
-    Categoria varchar(255)
-    PrecioUnitario decimal
-}
-
-Table ventas {
-    VentaID int [pk, not null]
-    ClienteID int [ref: > clientes.ClienteID]
-    ProductoID int [ref: > productos.ProductoID]
-    Cantidad int
-    FechaVenta date
-    Region varchar(50)
-}
+https://github.com/hral-work/PROYECTO_RSM-KODIGO_DAJ10/blob/main/1_DISE%C3%91O_BD/dbml_rsmdb.txt
 
 
 3.2 Implementación en el DBMS
@@ -141,7 +119,9 @@ Crear Usuario y Roles: Crear un usuario rsmuser y asignarle roles de lectura y e
 Crear las Tablas: Crear las tablas clientes, productos y ventas con sus respectivas relaciones.
 Verificar: Asegurar que las tablas y relaciones se han creado correctamente mediante consultas de verificación.
 
-SCRIPT creacion_db_user_tablas.sql:
+SCRIPT creacion_db_user_tablas.sql, ete se encuenta dentro de la carpeta 1_DISEÑO_DB: 
+
+https://github.com/hral-work/PROYECTO_RSM-KODIGO_DAJ10/blob/main/1_DISE%C3%91O_BD/creacion_db_user_tablas.sql
 
 -- 1. Creación de la Base de Datos
 CREATE DATABASE RSMDB;
@@ -238,7 +218,7 @@ La siguientes, son consultas SQL para extraer la información solicitada, basada
 
 
 4.2.1. Ventas Totales por Categoría de Producto (ventas_totales_por_categoria.sql):
-   
+https://github.com/hral-work/PROYECTO_RSM-KODIGO_DAJ10/blob/main/2_EXTRACCION_MANIPULACION_DATOS/ventas_totales_por_categoria.sql
 Esta consulta calcula la suma de las ventas agrupadas por categoría de producto.
 
 SELECT 
@@ -253,7 +233,7 @@ GROUP BY
 
 
 4.2.2. Clientes con Mayor Valor de Compra (clientes_mayor_valor_compra.sql):
-   
+https://github.com/hral-work/PROYECTO_RSM-KODIGO_DAJ10/blob/main/2_EXTRACCION_MANIPULACION_DATOS/clientes_mayor_valor_compra.sql
 Esta consulta calcula el total gastado por cada cliente y ordena los resultados de mayor a menor.
 
 SELECT 
@@ -273,8 +253,8 @@ ORDER BY
  
   
 4.2.3. Productos Más Vendidos por Región (productos_mas_vendidos_por_region.sql):
-   
-Esta consulta determina los productos más populares en cada región, basándose en la cantidad total vendida.
+https://github.com/hral-work/PROYECTO_RSM-KODIGO_DAJ10/blob/main/2_EXTRACCION_MANIPULACION_DATOS/productos_mas_vendidos_por_region.sql
+Esta consulta determina los productos más populares en cada región, basándose en la cantidad total vendida-
 
 SELECT 
     v.Region,
