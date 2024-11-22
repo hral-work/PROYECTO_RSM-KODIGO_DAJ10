@@ -19,7 +19,6 @@ https://github.com/hral-work/PROYECTO_RSM-KODIGO_DAJ10/blob/main/PROYECTO_RSM_KO
 ###################################################################
 
 2. DATOS RELEVANTES, DESCRIPCION Y REVISION DE LOS INSUMOS
-
 A continuación se describen los datos y el contenido de los tres Data Set que han sido proporcionados para proyecto.
 
 2.1 Descripción del contenido
@@ -34,86 +33,69 @@ Data Set Ventas
 Este dataset contiene registros de ventas.
 
 2.2 Relevancia de cada Data Set
-
 Clientes: Este dataset es crucial para entender quiénes son los clientes de la empresa. Es la base para cualquier análisis de comportamiento del cliente, segmentación de mercado, y estrategias de marketing personalizadas.
-
 Productos: Es fundamental para el análisis de inventarios, planificación de estrategias de precios, y análisis de ventas por categoría de producto.
-
 Ventas: Este dataset es esencial para el análisis de rendimiento de ventas, tendencias de compra, y evaluación del impacto de las campañas de marketing.
 
-
 2.3 Hallazgos Clave y Errores a Revisar.
-
 Estos son procesos con herramientas básicas como editor de texto, excel y otros, en el documento de informe del proyecto bajo la seccion con éste mismo nombre podemos encontrar mas información donde se amplian todos esto datos.
-
 
 ###################################################################
 
 3. DISEÑO DE LA BASE DE DATOS
    
 3.1 Diagrama Entidad-Relación
-
 Para la creación del diagrama entidad-relación (ERD) con base en los datasets proporcionados ("clientes", "productos" y "ventas"), identificamos las entidades principales, sus atributos, y las relaciones entre ellas. 
-
 A continuación, se detalla cómo se puede construir el ERD y qué elementos clave se deben considerar.
 
 Entidades y Atributos
 
-Tabla Clientes
-ClienteID (llave primaria)
-NombreCliente
-Email
-Telefono
-Direccion
+Tabla Clientes:
+ClienteID (llave primaria),
+NombreCliente,
+Email,
+Telefono,
+Direccion,
 
-Tabla Productos
-ProductoID (llave primaria)
-NombreProducto
-Categoria
-PrecioUnitario
+Tabla Productos:
+ProductoID (llave primaria),
+NombreProducto,
+Categoria,
+PrecioUnitario,
 
-Tabla Ventas
-VentaID (llave primaria)
-ClienteID (llave foránea)
-ProductoID (llave foránea)
-Cantidad
-FechaVenta
-Region
+Tabla Ventas:
+VentaID (llave primaria),
+ClienteID (llave foránea),
+ProductoID (llave foránea),
+Cantidad,
+FechaVenta,
+Region,
 
 Relación entre Clientes y Ventas:
-
 Un cliente puede tener asociadas muchas ventas.
 Cardinalidad: Uno a Muchos (1:N) desde Clientes a Ventas.
 ClienteID en la tabla Ventas es una llave foránea que referencia a ClienteID en la tabla Clientes.
 
 Relación entre Productos y Ventas:
-
 Un producto puede estar asociado con muchas ventas.
 Cardinalidad: Uno a Muchos (1:N) desde Productos a Ventas.
 ProductoID en la tabla Ventas es una llave foránea que referencia a ProductoID en la tabla Productos.
 
 Llaves y Cardinalidad
-
 Llaves Primarias: ClienteID en Clientes, ProductoID en Productos, y VentaID en Ventas son llaves primarias que identifican de manera única a cada registro en sus respectivas tablas.
 Llaves Foráneas: ClienteID y ProductoID en la tabla Ventas son llaves foráneas que crean relaciones entre las tablas, permitiendo la integridad referencial y conexiones lógicas entre datos.
 Cardinalidad: Definida por las relaciones 1:N, ya que un cliente puede tener múltiples ventas y un producto puede ser vendido en múltiples transacciones.
 
-
 Diagrama Visual
 
 Para generar el diagrama se utilizó el lenguaje DBML (Database Markup Language):
-
 https://dbdiagram.io/d/PROYECTO_FINAL-673c1b28e9daa85acaea168c
 
 El codigo DBML se encuentra dentro de la carpeta 1_DISEÑO_DB:
-
 https://github.com/hral-work/PROYECTO_RSM-KODIGO_DAJ10/blob/main/1_DISE%C3%91O_BD/dbml_rsmdb.txt
 
-
 3.2 Implementación en el DBMS
-
 Previo al análisis y normalización de datos es necesario que se ejecute la creación de la base de datos y tablas, una vez lista esa parte, se procede a cargar la información de los Data Sets en el ambiente habilitado.
-
 Se decidió utilizar como motor de base datos SQLServer 2019 por la facilidad que se tiene en cuanto a disponibilidad y acceso al uso de un ambiente de desarrollo.
 
 Los pasos requeridos en esta fase pueden resumirse así:
@@ -126,67 +108,11 @@ SCRIPT creacion_db_user_tablas.sql, ete se encuenta dentro de la carpeta 1_DISE�
 
 https://github.com/hral-work/PROYECTO_RSM-KODIGO_DAJ10/blob/main/1_DISE%C3%91O_BD/creacion_db_user_tablas.sql
 
--- 1. Creación de la Base de Datos
-CREATE DATABASE RSMDB;
-GO
-
--- 2. Creación del Usuario y Asignación de Permisos
-USE RSMDB;
-GO
-
--- Crear usuario
-CREATE USER rsmuser WITH PASSWORD = 'password';
-GO
-
--- Crear roles
-CREATE ROLE db_datareader;
-CREATE ROLE db_datawriter;
-GO
-
--- Asignar permisos al usuario
-ALTER ROLE db_datareader ADD MEMBER rsmuser;
-ALTER ROLE db_datawriter ADD MEMBER rsmuser;
-GO
-
--- 3. Creación de las Tablas
-CREATE TABLE clientes (
-  ClienteID int PRIMARY KEY NOT NULL,
-  NombreCliente varchar(255),
-  Email varchar(255),
-  Telefono varchar(50),
-  Direccion varchar(255)
-);
-GO
-
-CREATE TABLE productos (
-  ProductoID int PRIMARY KEY NOT NULL,
-  NombreProducto varchar(255),
-  Categoria varchar(255),
-  PrecioUnitario decimal(10, 2)
-);
-GO
-
-CREATE TABLE ventas (
-  VentaID int PRIMARY KEY NOT NULL,
-  ClienteID int,
-  ProductoID int,
-  Cantidad int,
-  FechaVenta date,
-  Region varchar(50),
-  FOREIGN KEY (ClienteID) REFERENCES clientes (ClienteID),
-  FOREIGN KEY (ProductoID) REFERENCES productos (ProductoID)
-);
-GO
-
-
-
-
 ###################################################################
 
 4. EXTRACCION Y MANIPULACION DE DATOS
    
 4.1 Importación de datos
-
 SQL Server ofrece un asistente de Importación y Exportación para cargar datos desde archivos CSV a las tablas de SQL Server.
 
 -Abrir SQL Server Management Studio (SSMS).
