@@ -219,55 +219,17 @@ SELECT * FROM ventas;
 
 La siguientes, son consultas SQL para extraer la información solicitada, basadas en los datos de los datasets y el procedimiento de importación descritos anteriormente.
 
-
 4.2.1. Ventas Totales por Categoría de Producto (ventas_totales_por_categoria.sql):
 https://github.com/hral-work/PROYECTO_RSM-KODIGO_DAJ10/blob/main/2_EXTRACCION_MANIPULACION_DATOS/ventas_totales_por_categoria.sql
 Esta consulta calcula la suma de las ventas agrupadas por categoría de producto.
 
-SELECT 
-    p.Categoria,
-    SUM(v.Cantidad * p.PrecioUnitario) AS VentasTotales
-FROM 
-    ventas v
-JOIN 
-    productos p ON v.ProductoID = p.ProductoID
-GROUP BY 
-    p.Categoria;
-
-
 4.2.2. Clientes con Mayor Valor de Compra (clientes_mayor_valor_compra.sql):
 https://github.com/hral-work/PROYECTO_RSM-KODIGO_DAJ10/blob/main/2_EXTRACCION_MANIPULACION_DATOS/clientes_mayor_valor_compra.sql
 Esta consulta calcula el total gastado por cada cliente y ordena los resultados de mayor a menor.
-
-SELECT 
-    c.ClienteID,
-    c.NombreCliente,
-    SUM(v.Cantidad * p.PrecioUnitario) AS TotalGastado
-FROM 
-    ventas v
-JOIN 
-    clientes c ON v.ClienteID = c.ClienteID
-JOIN 
-    productos p ON v.ProductoID = p.ProductoID
-GROUP BY 
-    c.ClienteID, c.NombreCliente
-ORDER BY 
-    TotalGastado DESC;
- 
   
 4.2.3. Productos Más Vendidos por Región (productos_mas_vendidos_por_region.sql):
 https://github.com/hral-work/PROYECTO_RSM-KODIGO_DAJ10/blob/main/2_EXTRACCION_MANIPULACION_DATOS/productos_mas_vendidos_por_region.sql
 Esta consulta determina los productos más populares en cada región, basándose en la cantidad total vendida-
 
-SELECT 
-    v.Region,
-    p.NombreProducto,
-    SUM(v.Cantidad) AS CantidadTotalVendida
-FROM 
-    ventas v
-JOIN 
-    productos p ON v.ProductoID = p.ProductoID
-GROUP BY 
-    v.Region, p.NombreProducto
-ORDER BY 
-    v.Region, CantidadTotalVendida DESC;
+El resultado de estos querys han sido exitosos, los que representan estos resultados seran esstudiados en fases posteriores.
+
