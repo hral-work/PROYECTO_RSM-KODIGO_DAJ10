@@ -13,6 +13,9 @@ Modelo Predictivo (Opcional).
 Reporte y Presentación.
 El objetivo final es proporcionar estrategias basadas en datos para mejorar las ventas del cliente.
 
+Toda la información recopilada, procedimientos, scripts y demas datos referentes al dimiensionamiento del analisis y solucion de requerimientos han sido plasmados en el documento PROYECTO_RSM_KODIGO_DAJ10.pdf
+https://github.com/hral-work/PROYECTO_RSM-KODIGO_DAJ10/blob/main/PROYECTO_RSM_KODIGO_DAJ10.pdf
+
 ###################################################################
 
 2. DATOS RELEVANTES, DESCRIPCION Y REVISION DE LOS INSUMOS
