@@ -8,7 +8,7 @@ Rafael Alexander Martínez - k00002735.
 Javier Antonio Valle - k00002730.
 Hugo Robin Aparicio - k00002729.
 
-ENTREGABLES DEL AVANCE 1: 21 de noviembre de 2024.
+ENTREGABLE DEL AVANCE 1: 21 de noviembre de 2024.
 Diseño de base de datos | Extracción y Manipulación de datos.
 
 
