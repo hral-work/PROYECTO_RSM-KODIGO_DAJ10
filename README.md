@@ -1,4 +1,16 @@
-# PROYECTO_RSM-KODIGO_DAJ10
+PROYECTO DE EVALUACIÓN RSM - KODIGO - DATA ANALYST JR - GRUPO 02
+
+URL DE GITHUB: https://github.com/hral-work/PROYECTO_RSM-KODIGO_DAJ10.git
+
+ALUMNOS:
+Katia Elizabeth Martínez -  k00002733.
+Rafael Alexander Martínez - k00002735.
+Javier Antonio Valle - k00002730.
+Hugo Robin Aparicio - k00002729.
+
+ENTREGABLES DEL AVANCE 1: 21 de noviembre de 2024.
+Diseño de base de datos | Extracción y Manipulación de datos.
+
 
 1. GENERALIDADES DEL PROYECTO Y REQUERIMIENTOS 
 
