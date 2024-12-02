@@ -169,5 +169,6 @@ Esta consulta calcula el total gastado por cada cliente y ordena los resultados 
 https://github.com/hral-work/PROYECTO_RSM-KODIGO_DAJ10/blob/main/2_EXTRACCION_MANIPULACION_DATOS/productos_mas_vendidos_por_region.sql
 Esta consulta determina los productos más populares en cada región, basándose en la cantidad total vendida-
 
-El resultado de estos querys han sido exitosos, los que representan estos resultados seran esstudiados en fases posteriores.
+Nota: Para el script de Productos Más Vendidos por Región, se tomo en consideración el comentario de evaluación realizado por Luis Quesada: En cuanto a las consultas, en los productos mas vendidos por region, sugiero mostrar solamente el top 3 por region, ya que actualmente muestra todos los productos y no da un vistazo rapido por region para facilidad de analisis.
 
+ACTUALIZACION DE DATOS Y RESULTADOS EN PROCESO....
