@@ -276,9 +276,11 @@ Este análisis integral apoya la toma de decisiones estratégicas, mejora la pla
 
 ###################################################################
 
-6 CREACIÓN DE DASHBOARD
+6. CREACIÓN DE DASHBOARD
 
 6.1 Desarrollo del Dashboard en Power BI
+
+El archivo para PowerBI se encuentra acá: https://github.com/hral-work/PROYECTO_RSM-KODIGO_DAJ10/blob/main/4_CREACION_DASHBOARD/DASHBOARD_RSM.pbix
 
 Resumen del Procedimiento:
 Importar Datos a Power BI: Cargar los datos procesados para utilizarlos en el dashboard.
