@@ -173,7 +173,6 @@ Nota: Para el script de Productos Más Vendidos por Región, se tomo en consider
 
 ###################################################################
 
-
 5. ANALISIS EXPLORATORIO DE DATOS
 
 5.1 Análisis Estadístico Descriptivo
