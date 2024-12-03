@@ -171,4 +171,253 @@ Esta consulta determina los productos más populares en cada región, basándose
 
 Nota: Para el script de Productos Más Vendidos por Región, se tomo en consideración el comentario de evaluación realizado por Luis Quesada: En cuanto a las consultas, en los productos mas vendidos por region, sugiero mostrar solamente el top 3 por region, ya que actualmente muestra todos los productos y no da un vistazo rapido por region para facilidad de analisis.
 
-ACTUALIZACION DE DATOS Y RESULTADOS EN PROCESO....
+###################################################################
+
+
+5. ANALISIS EXPLORATORIO DE DATOS
+
+5.1 Análisis Estadístico Descriptivo
+
+Resumen del proceso que realiza el código:
+Preparar el Entorno: Instalamos las librerías necesarias.
+Cargar los Datos: Leer los archivos CSV para generar DataFrames.
+Calcular Estadísticas Básicas: Calcula medias, medianas, desviaciones estándar y otras estadísticas descriptivas.
+Identificar Variables Importantes: Calcular el número de transacciones y ventas promedio por cliente.
+Analizar la Distribución de las Ventas: Analizar distribuciones de ventas.
+
+Nombre del script: 5_1_analisis_estadistico_descriptivo_v4.py
+
+# Paso 1: Preparar el Entorno
+# Paso 2: Cargar los Datos
+# Paso 3: Calcular Estadísticas Básicas
+# Paso 4: Identificar Variables Importantes
+# Paso 5: Analizar la Distribución de las Ventas
+# Paso 6: Resumir y Guardar Resultados
+
+Los resultados de este script se encuentran aca: https://github.com/hral-work/PROYECTO_RSM-KODIGO_DAJ10/tree/main/3_ANALISIS_EXPLORATORIO_DATOS
+
+Interpretar los resultados.
+Qué significan estos resultados.
+Distribución de Ventas: La distribución de las ventas por cantidad muestra que la mayoría de las transacciones están concentradas alrededor de la media de 4.93 unidades, con una variabilidad moderada.
+Ventas por Cliente: La media de ventas por cliente puede ayudar a identificar qué tan valiosos son los clientes en promedio, lo que es crucial para estrategias de marketing y retención.
+Variabilidad de Ventas: La desviación estándar ayuda a entender la dispersión en los datos de ventas, lo que es útil para detectar ventas anómalas o patrones inusuales.
+Tendencias de Ventas: Conocer la media, mediana y la distribución de las ventas puede ayudar a planificar el inventario y optimizar las estrategias de precios y promociones.
+Estos insights pueden proporcionar una base para tomar decisiones de negocio informadas y estratégicas. 
+
+
+5.2 Identificación de patrones, tendencias.
+
+Procedimiento para este requerimiento:
+Preparar el Entorno: Instalamos las librerías necesarias.
+Cargar los Datos: Lee los archivos CSV en DataFrames.
+Analizar Series Temporales de Ventas: Agrupar ventas por fecha y generar gráfica.
+Análisis de Comportamiento de Compra de Clientes: Ventas totales por cliente y su gráfica.
+Productos con Bajas Ventas: Imprime lista de productos con bajas ventas.
+
+Nombre del script: 5_2_identificacion_patrones_v5.py
+
+# Paso 1: Preparar el Entorno
+# Paso 2: Cargar los Datos
+# Paso 3: Analizar Series Temporales de Ventas
+# Paso 4: Análisis de Comportamiento de Compra de Clientes
+
+El resultado de este script se muestra aca: https://github.com/hral-work/PROYECTO_RSM-KODIGO_DAJ10/tree/main/3_ANALISIS_EXPLORATORIO_DATOS
+
+Resumen de Resultados y sus Implicaciones.
+
+Análisis de Ventas Diarias:
+Gráfico de Barras: Visualización de las ventas diarias. Permite identificar tendencias ascendentes o descendentes en las ventas, ayudando a comprender los patrones de demanda y detectar posibles estacionalidades.
+Comportamiento de Compra de Clientes:
+Ventas Totales por Cliente: Calcula y grafica las ventas totales por cada cliente. Ayuda a identificar los clientes más valiosos y analizar su comportamiento de compra, lo que puede ser útil para estrategias de marketing y retención de clientes.
+Productos con Bajas Ventas:
+Identificación de Productos con Bajas Ventas: Generaliza los productos con ventas por debajo del décimo percentil.Permite identificar productos que no están vendiendo bien, lo cual es crucial para la optimización del inventario y las estrategias de producto.
+Implicaciones Generales:
+Optimización de Estrategias: La visualización y el análisis de datos proporcionan información para la toma de decisiones en áreas como marketing, gestión de clientes y gestión de productos.
+Detección de Tendencias: Se pueden identificar patrones de ventas y comportamientos de compra ayuda a prever la demanda futura y a planificar.
+Mejora de la Eficiencia: Detectar productos con bajas ventas permite reducir costos de almacenamiento y enfocar recursos en productos más rentables.
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+5.3 Generación de visualizaciones
+Resumen del procedimiento para este requerimiento:
+Preparar el Entorno:
+Instalar las librerías necesarias: matplotlib, seaborn, pandas, numpy.
+Cargar los Datos:
+Leer los archivos CSV en DataFrames: clientes.csv, productos.csv, ventas.csv.
+Crear Visualizaciones:
+Ventas Totales por Categoría de Producto: Agrupar ventas por categoría de producto y generar un gráfico de barras.
+Tendencia de Ventas Diarias: Agrupar ventas por fecha y generar un gráfico de líneas.
+Distribución de Ventas por Producto: Generar un histograma con línea para visualizar la distribución de ventas.
+Ventas por Cliente:Agrupar ventas por cliente y generar un gráfico de dispersión.
+Matriz de Correlación:Generar un mapa de calor para visualizar la correlación entre las variables de ventas.
+Nombre del script: 5_3_generacion_visualizaciones_v2.py
+
+# Paso 1: Preparar el Entorno
+# Instala las librerías necesarias si aún no las tienes:
+# pip install matplotlib seaborn pandas numpy
+
+import pandas as pd  # Importa la librería de manipulación de datos Pandas
+import matplotlib.pyplot as plt  # Importa la librería de visualización Matplotlib
+import seaborn as sns  # Importa la librería de visualización Seaborn
+
+# Paso 2: Cargar los Datos
+# Leer los archivos CSV en DataFrames de pandas
+
+# Cargar los archivos CSV
+clientes = pd.read_csv('clientes.csv')  # Carga el archivo CSV 'clientes.csv' en un DataFrame
+productos = pd.read_csv('productos.csv')  # Carga el archivo CSV 'productos.csv' en un DataFrame
+ventas = pd.read_csv('ventas.csv')  # Carga el archivo CSV 'ventas.csv' en un DataFrame
+
+# Paso 3: Crear Visualizaciones
+
+# 1. Gráfico de Barras: Ventas Totales por Categoría de Producto
+
+# Verificar que la columna 'Categoria' existe en productos
+if 'Categoria' in productos.columns:
+   # Calcular ventas totales por categoría de producto
+   ventas_productos = ventas.merge(productos, on='ProductoID')  # Une las tablas 'ventas' y 'productos' en 'ProductoID'
+   ventas_categoria = ventas_productos.groupby('Categoria')['Cantidad'].sum().reset_index()  # Agrupa las ventas por 'Categoria' y suma las cantidades
+
+   # Crear gráfico de barras
+   plt.figure(figsize=(10, 6))  # Crea una nueva figura con un tamaño específico
+   sns.barplot(x='Categoria', y='Cantidad', data=ventas_categoria)  # Genera un gráfico de barras con los datos de ventas por categoría
+   plt.title('Ventas Totales por Categoría de Producto')  # Añade un título al gráfico
+   plt.xlabel('Categoría')  # Etiqueta el eje x como 'Categoría'
+   plt.ylabel('Cantidad Vendida')  # Etiqueta el eje y como 'Cantidad Vendida'
+   plt.xticks(rotation=45)  # Rota las etiquetas del eje x para mejor legibilidad
+   plt.show()  # Muestra el gráfico
+
+   # Análisis
+   print("Este gráfico de barras muestra las ventas totales agrupadas por la categoría de producto. Se puede observar cuál categoría tiene el mayor volumen de ventas.")
+else:
+   print("La columna 'Categoria' no existe en el DataFrame 'productos'.")
+
+# 2. Gráfico de Barras: Tendencia de Ventas Diarias
+
+# Convertir FechaVenta a formato de fecha
+ventas['FechaVenta'] = pd.to_datetime(ventas['FechaVenta'])  # Convierte la columna 'FechaVenta' a tipo datetime
+
+# Agrupar ventas por fecha
+ventas_diarias = ventas.groupby('FechaVenta')['Cantidad'].sum().reset_index()  # Agrupa las ventas por fecha y suma las cantidades
+
+# Graficar ventas diarias con gráfico de barras
+plt.figure(figsize=(15, 6))  # Tamaño de la figura
+plt.bar(ventas_diarias['FechaVenta'], ventas_diarias['Cantidad'], width=1.0)  # Genera un gráfico de barras para las ventas diarias
+plt.title('Ventas Diarias')  # Añade un título al gráfico
+plt.xlabel('Fecha')  # Etiqueta el eje x como 'Fecha'
+plt.ylabel('Cantidad Vendida (Unidades)')  # Etiqueta el eje y como 'Cantidad Vendida (Unidades)'
+plt.xticks(rotation=45)  # Rota las etiquetas del eje x para mayor legibilidad
+plt.tight_layout()  # Ajusta el diseño para que todo encaje bien
+plt.show()  # Muestra el gráfico
+
+# Análisis
+print("Este gráfico de barras muestra la tendencia de ventas diarias. Se pueden identificar patrones y fluctuaciones en las ventas a lo largo del tiempo.")
+
+# 3. Histograma: Distribución de Ventas por Producto
+
+# Crear histograma
+plt.figure(figsize=(10, 6))  # Crea una nueva figura con un tamaño específico
+sns.histplot(ventas['Cantidad'], bins=30, kde=True)  # Genera un histograma para la distribución de ventas por producto con una línea KDE
+plt.title('Distribución de Ventas por Producto')  # Añade un título al gráfico
+plt.xlabel('Cantidad Vendida')  # Etiqueta el eje x como 'Cantidad Vendida'
+plt.ylabel('Frecuencia')  # Etiqueta el eje y como 'Frecuencia'
+plt.show()  # Muestra el gráfico
+
+# Análisis
+print("Este histograma muestra la distribución de la cantidad de ventas por producto. La línea KDE ayuda a visualizar la densidad de las ventas.")
+
+# 4. Diagrama de Dispersión: Ventas por Cliente
+
+# Calcular ventas totales por cliente
+ventas_cliente = ventas.groupby('ClienteID')['Cantidad'].sum().reset_index()  # Agrupa las ventas por 'ClienteID' y suma las cantidades
+
+# Crear diagrama de dispersión
+plt.figure(figsize=(10, 6))  # Crea una nueva figura con un tamaño específico
+sns.scatterplot(x='ClienteID', y='Cantidad', data=ventas_cliente)  # Genera un gráfico de dispersión para las ventas por cliente
+plt.title('Ventas por Cliente')  # Añade un título al gráfico
+plt.xlabel('ClienteID')  # Etiqueta el eje x como 'ClienteID'
+plt.ylabel('Cantidad Vendida')  # Etiqueta el eje y como 'Cantidad Vendida'
+plt.show()  # Muestra el gráfico
+
+# Análisis
+print("Este diagrama de dispersión muestra las ventas totales por cliente. Se pueden identificar clientes con compras altas y bajas.")
+
+
+
+
+El resultado de este otro script es el siguiente:
+
+
+
+
+
+
+
+
+Resumen de Resultados y Contribución al Negocio.
+
+Ventas por Categoría de Producto:
+Resultados: Identificación de categorías con mayores ventas.
+Contribución: Mejora en la planificación de inventario y marketing.
+Tendencia de Ventas Diarias:
+Resultados: Identificación de patrones y fluctuaciones en ventas diarias.
+Contribución: Mejora en la previsión de demanda y gestión de inventarios.
+Distribución de Ventas por Producto:
+Resultados: Variabilidad en ventas de productos.
+Contribución: Optimización del portafolio de productos.
+Ventas por Cliente:
+Resultados: Identificación de clientes clave.
+Contribución: Personalización de estrategias de marketing y fidelización.
+Matriz de Correlación:
+Resultados: Relación entre variables de ventas.
+Contribución: Optimización de estrategias de marketing y promociones.
+Este análisis integral apoya la toma de decisiones estratégicas, mejora la planificación y aumenta la eficiencia operativa.
+
+###################################################################
+
+6 CREACIÓN DE DASHBOARD
+
+6.1 Desarrollo del Dashboard en Power BI
+
+Resumen del Procedimiento:
+Importar Datos a Power BI: Cargar los datos procesados para utilizarlos en el dashboard.
+Resumen de KPIs Clave: Crear un panel de control con indicadores clave de rendimiento para una visión rápida del negocio.
+Gráficos de Tendencias de Ventas: Visualizar las tendencias de ventas a lo largo del tiempo para identificar patrones.
+
+Paso 1: Importar Datos a Power BI
+En esta etapa, estamos cargando los datos procesados en Power BI para que podamos usarlos en nuestras visualizaciones.
+Lo primero que se realiza es abrir Power BI Desktop para la creación de los Dashboard
+Seleccionar en la ventana de inicio, “Obtener datos” para este caso se realiza directamente con la Base de datos de SQLServer.
+Se establecen las credenciales definidas en esa base de datos, se buscan las tablas de clientes, productos y ventas cargados anteriormente.
+Se finaliza con transformar datos en Power BI.
+
+Paso 2: Desarrollar un Resumen de KPIs Clave
+Aquí, estamos creando un panel de control con indicadores clave de rendimiento (KPIs) que proporcionan una visión rápida del rendimiento del negocio.
+Se procede a realizar la creación de los KPIs según los requerimientos que se necesitan en el proyecto.
+Ventas Totales: Usa una medida que sume la cantidad vendida.
+Número de Transacciones: Cuenta el número total de ventas.
+Clientes Únicos: Cuenta el número distinto de clientes.
+Paso 3: Implementar Gráficos de Tendencias de Ventas
+Se realizan gráficos de tendencias, en donde se mostrará las ventas a lo largo del tiempo.
+Agrega el campo de fecha al eje x y la cantidad de ventas al eje y.
+Segmentar los gráficos por diferentes criterios como producto o región usando filtros.
+Visualizaciones de segmentación para permitir a los usuarios filtrar los datos por criterios diferentes.
+
+Explicación: Estos gráficos de líneas nos ayudan a visualizar las tendencias de ventas a lo largo del tiempo, identificando patrones y estacionalidades.
+
+Resumen de Resultados y Análisis de Insights
+
+Descripción de los datos graficados.
+KPIs Clave: Proporcionan una visión rápida del rendimiento del negocio, permitiendo a los directivos tomar decisiones informadas basadas en los principales indicadores.
+Gráficos de Tendencias: Ayudan a identificar patrones y fluctuaciones en las ventas a lo largo del tiempo, facilitando la planificación de inventarios y estrategias de marketing.
+Breve explicación de las visualizaciones.
+Gráfico de Líneas: La tendencia de ventas revela patrones estacionales y fluctuaciones en las ventas a lo largo del tiempo.
+TreeMap: Muestra una representación visual de las ventas totales por categoría la cual permite identificar patrones y valores atípicos según el tamaño y color de los rectángulos.
+Gráfico Circular: Muestra el porcentaje de ingreso por ventas según la región.
+Gráfico de Barras: Las ventas totales por categoría de producto agrupadas por año,  muestran qué categorías tienen el mayor volumen de ventas y permiten una rápida comparación visual respecto a los años anteriores y posteriores.
+Matriz: Muestra el detalle de las ventas por región y año permitiendo hacer drill down a categoría de producto y producto específico.
+Insights Clave
+Identificación de Productos y Categorías Populares: Conocer qué productos y categorías tienen mayores ventas permite enfocar esfuerzos en mantener un inventario óptimo y dirigir las promociones hacia esos productos.
+Análisis de Tendencias: Identificar patrones estacionales y tendencias en las ventas diarias facilita una mejor planificación y gestión del inventario, así como el diseño de campañas de marketing más efectivas.
+Segmentación y Fidelización de Clientes: Entender el comportamiento de compra de los clientes ayuda a segmentarlos eficazmente, permitiendo personalizar estrategias de retención y aumentar la fidelización.
+Optimización de Precios y Promociones: Analizar la distribución de ventas por producto y la correlación entre variables puede influir en las decisiones de precios y estrategias promocionales, mejorando la eficiencia y efectividad.
+Estos insights proporcionan una base sólida para tomar decisiones estratégicas informadas, optimizar operaciones y mejorar la satisfacción del cliente, impulsando así el rendimiento general del negocio. 
