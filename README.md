@@ -194,25 +194,20 @@ Analizar la Distribución de las Ventas: Analizar distribuciones de ventas.
 Nombre del script:
  5_1_analisis_estadistico_descriptivo_v4.py
 
-Paso 1: Preparar el Entorno
-Paso 2: Cargar los Datos
-Paso 3: Calcular Estadísticas Básicas
-Paso 4: Identificar Variables Importantes
-Paso 5: Analizar la Distribución de las Ventas
+Paso 1: Preparar el Entorno 
+Paso 2: Cargar los Datos 
+Paso 3: Calcular Estadísticas Básicas 
+Paso 4: Identificar Variables Importantes 
+Paso 5: Analizar la Distribución de las Ventas 
 Paso 6: Resumir y Guardar Resultados
 
 Los resultados de este script se encuentran aca: https://github.com/hral-work/PROYECTO_RSM-KODIGO_DAJ10/tree/main/3_ANALISIS_EXPLORATORIO_DATOS
 
-Interpretamos los resultados,qué significan estos resultados.
-
-Distribución de Ventas: La distribución de las ventas por cantidad muestra que la mayoría de las transacciones están concentradas alrededor de la media de 4.9 unidades, con una variabilidad moderada.
-
-Ventas por Cliente: La media de ventas por cliente puede ayudar a identificar qué tan valiosos son los clientes en promedio, lo que es crucial para estrategias de marketing y retención.
-
-Variabilidad de Ventas: La desviación estándar ayuda a entender la dispersión en los datos de ventas, lo que es útil para detectar ventas anómalas o patrones inusuales.
-
-Tendencias de Ventas: Conocer la media, mediana y la distribución de las ventas puede ayudar a planificar el inventario y optimizar las estrategias de precios y promociones.
-
+Interpretamos los resultados:
+-Distribución de Ventas: La distribución de las ventas por cantidad muestra que la mayoría de las transacciones están concentradas alrededor de la media de 4.9 unidades (~5), con una variabilidad moderada.
+-Ventas por Cliente: La media de ventas por cliente puede ayudar a identificar qué tan valiosos son los clientes en promedio, lo que es crucial para estrategias de marketing y retención.
+-Variabilidad de Ventas: La desviación estándar ayuda a entender la dispersión en los datos de ventas, lo que es útil para detectar ventas anómalas o patrones inusuales.
+-Tendencias de Ventas: Conocer la media, mediana y la distribución de las ventas puede ayudar a planificar el inventario y optimizar las estrategias de precios y promociones.
 Estos insights pueden proporcionar una base para tomar decisiones de negocio.
 
 
