@@ -124,12 +124,14 @@ https://github.com/hral-work/PROYECTO_RSM-KODIGO_DAJ10/blob/main/1_DISE%C3%91O_B
 
 4. EXTRACCION Y MANIPULACION DE DATOS
    
-4.1 Importación de datos
+4.1 Importación de datos.
+
 SQL Server ofrece un asistente de Importación y Exportación para cargar datos desde archivos CSV a las tablas de SQL Server.
 
 -Abrir SQL Server Management Studio (SSMS).
 
 -Conectarse a la instancia de SQL Server.
+
 Hacer clic derecho en la base de datos RSMDB y seleccionar Tasks -> Import Data.
 Elegir el origen de datos:
 Source: Flat File Source
@@ -178,13 +180,15 @@ Nota: Para el script de Productos Más Vendidos por Región, se tomo en consider
 5.1 Análisis Estadístico Descriptivo
 
 Resumen del proceso que realiza el código:
+
 Preparar el Entorno: Instalamos las librerías necesarias.
 Cargar los Datos: Leer los archivos CSV para generar DataFrames.
 Calcular Estadísticas Básicas: Calcula medias, medianas, desviaciones estándar y otras estadísticas descriptivas.
 Identificar Variables Importantes: Calcular el número de transacciones y ventas promedio por cliente.
 Analizar la Distribución de las Ventas: Analizar distribuciones de ventas.
 
-Nombre del script: 5_1_analisis_estadistico_descriptivo_v4.py
+Nombre del script:
+ 5_1_analisis_estadistico_descriptivo_v4.py
 
 Paso 1: Preparar el Entorno
 Paso 2: Cargar los Datos
@@ -195,22 +199,31 @@ Paso 6: Resumir y Guardar Resultados
 
 Los resultados de este script se encuentran aca: https://github.com/hral-work/PROYECTO_RSM-KODIGO_DAJ10/tree/main/3_ANALISIS_EXPLORATORIO_DATOS
 
-Interpretar los resultados.
-Qué significan estos resultados.
-Distribución de Ventas: La distribución de las ventas por cantidad muestra que la mayoría de las transacciones están concentradas alrededor de la media de 4.93 unidades, con una variabilidad moderada.
+Interpretamos los resultados,qué significan estos resultados.
+
+Distribución de Ventas: La distribución de las ventas por cantidad muestra que la mayoría de las transacciones están concentradas alrededor de la media de 4.9 unidades, con una variabilidad moderada.
+
 Ventas por Cliente: La media de ventas por cliente puede ayudar a identificar qué tan valiosos son los clientes en promedio, lo que es crucial para estrategias de marketing y retención.
+
 Variabilidad de Ventas: La desviación estándar ayuda a entender la dispersión en los datos de ventas, lo que es útil para detectar ventas anómalas o patrones inusuales.
+
 Tendencias de Ventas: Conocer la media, mediana y la distribución de las ventas puede ayudar a planificar el inventario y optimizar las estrategias de precios y promociones.
-Estos insights pueden proporcionar una base para tomar decisiones de negocio informadas y estratégicas. 
+
+Estos insights pueden proporcionar una base para tomar decisiones de negocio.
 
 
-5.2 Identificación de patrones, tendencias.
+5.2 Identificación de patrones y tendencias.
 
-Procedimiento para este requerimiento:
+Procedimiento para este requerimiento.
+
 Preparar el Entorno: Instalamos las librerías necesarias.
+
 Cargar los Datos: Lee los archivos CSV en DataFrames.
+
 Analizar Series Temporales de Ventas: Agrupar ventas por fecha y generar gráfica.
+
 Análisis de Comportamiento de Compra de Clientes: Ventas totales por cliente y su gráfica.
+
 Productos con Bajas Ventas: Imprime lista de productos con bajas ventas.
 
 Nombre del script: 5_2_identificacion_patrones_v5.py
@@ -224,13 +237,20 @@ El resultado de este script se muestra aca: https://github.com/hral-work/PROYECT
 
 Resumen de Resultados y sus Implicaciones.
 
-Análisis de Ventas Diarias:
+Análisis de Ventas Diarias.
+
 Gráfico de Barras: Visualización de las ventas diarias. Permite identificar tendencias ascendentes o descendentes en las ventas, ayudando a comprender los patrones de demanda y detectar posibles estacionalidades.
-Comportamiento de Compra de Clientes:
+
+Comportamiento de Compra de Clientes.
+
 Ventas Totales por Cliente: Calcula y grafica las ventas totales por cada cliente. Ayuda a identificar los clientes más valiosos y analizar su comportamiento de compra, lo que puede ser útil para estrategias de marketing y retención de clientes.
-Productos con Bajas Ventas:
+
+Productos con Bajas Ventas.
+
 Identificación de Productos con Bajas Ventas: Generaliza los productos con ventas por debajo del décimo percentil.Permite identificar productos que no están vendiendo bien, lo cual es crucial para la optimización del inventario y las estrategias de producto.
-Implicaciones Generales:
+
+Implicaciones Generales.
+
 Optimización de Estrategias: La visualización y el análisis de datos proporcionan información para la toma de decisiones en áreas como marketing, gestión de clientes y gestión de productos.
 Detección de Tendencias: Se pueden identificar patrones de ventas y comportamientos de compra ayuda a prever la demanda futura y a planificar.
 Mejora de la Eficiencia: Detectar productos con bajas ventas permite reducir costos de almacenamiento y enfocar recursos en productos más rentables.                                                                         
