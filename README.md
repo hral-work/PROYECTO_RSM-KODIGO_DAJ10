@@ -25,7 +25,7 @@ Modelo Predictivo (Opcional).
 Reporte y Presentación.
 El objetivo final es proporcionar estrategias basadas en datos para mejorar las ventas del cliente.
 
-Toda la información recopilada, procedimientos, scripts y demas datos referentes al dimiensionamiento del analisis y solucion de requerimientos han sido plasmados en el documento PROYECTO_RSM_KODIGO_DAJ10.pdf
+Toda la información recopilada para el entregable No. 1, procedimientos, scripts y demas datos referentes al dimiensionamiento del analisis y solucion de requerimientos han sido plasmados en el documento PROYECTO_RSM_KODIGO_DAJ10.pdf
 https://github.com/hral-work/PROYECTO_RSM-KODIGO_DAJ10/blob/main/PROYECTO_RSM_KODIGO_DAJ10.pdf
 
 ###################################################################
@@ -174,6 +174,9 @@ Esta consulta determina los productos más populares en cada región, basándose
 Nota: Para el script de Productos Más Vendidos por Región, se tomo en consideración el comentario de evaluación realizado por Luis Quesada: En cuanto a las consultas, en los productos mas vendidos por region, sugiero mostrar solamente el top 3 por region, ya que actualmente muestra todos los productos y no da un vistazo rapido por region para facilidad de analisis.
 
 ###################################################################
+
+Toda la información recopilada para el entregable No. 2, procedimientos, scripts y demas datos referentes al dimiensionamiento del analisis y solucion de requerimientos han sido plasmados en el documento PROYECTO_RSM_KODIGO_DAJ10.pdf
+https://github.com/hral-work/PROYECTO_RSM-KODIGO_DAJ10/blob/main/PROYECTO_RSM_KODIGO_DAJ10.pdf
 
 5. ANALISIS EXPLORATORIO DE DATOS
 
