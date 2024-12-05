@@ -28,7 +28,7 @@ El objetivo final es proporcionar estrategias basadas en datos para mejorar las 
 Toda la información recopilada para el entregable No. 1, procedimientos, scripts y demas datos referentes al dimiensionamiento del analisis y solucion de requerimientos han sido plasmados en el documento PROYECTO_RSM_KODIGO_DAJ10.pdf
 https://github.com/hral-work/PROYECTO_RSM-KODIGO_DAJ10/blob/main/ANALISIS_RSM_KODIGO_DAJ10_AVANCE_1.pdf
 
-###################################################################
+#######################################################################################################
 
 2. DATOS RELEVANTES, DESCRIPCION Y REVISION DE LOS INSUMOS
 A continuación se describen los datos y el contenido de los tres Data Set que han sido proporcionados para proyecto.
@@ -52,7 +52,7 @@ Ventas: Este dataset es esencial para el análisis de rendimiento de ventas, ten
 2.3 Hallazgos Clave y Errores a Revisar.
 Estos son procesos con herramientas básicas como editor de texto, excel y otros, en el documento de informe del proyecto bajo la seccion con éste mismo nombre podemos encontrar mas información donde se amplian todos esto datos.
 
-###################################################################
+#######################################################################################################
 
 3. DISEÑO DE LA BASE DE DATOS
    
@@ -120,7 +120,7 @@ SCRIPT creacion_db_user_tablas.sql, ete se encuenta dentro de la carpeta 1_DISE�
 
 https://github.com/hral-work/PROYECTO_RSM-KODIGO_DAJ10/blob/main/1_DISE%C3%91O_BD/creacion_db_user_tablas.sql
 
-###################################################################
+#######################################################################################################
 
 4. EXTRACCION Y MANIPULACION DE DATOS
    
@@ -173,7 +173,8 @@ Esta consulta determina los productos más populares en cada región, basándose
 
 Nota: Para el script de Productos Más Vendidos por Región, se tomo en consideración el comentario de evaluación realizado por Luis Quesada: En cuanto a las consultas, en los productos mas vendidos por region, sugiero mostrar solamente el top 3 por region, ya que actualmente muestra todos los productos y no da un vistazo rapido por region para facilidad de analisis.
 
-###################################################################
+#######################################################################################################
+#######################################################################################################
 
 Toda la información recopilada para el entregable No. 2, procedimientos, scripts y demas datos referentes al dimiensionamiento del analisis y solucion de requerimientos han sido plasmados en el documento PROYECTO_RSM_KODIGO_DAJ10.pdf
 https://github.com/hral-work/PROYECTO_RSM-KODIGO_DAJ10/blob/main/ANALISIS_RSM_KODIGO_DAJ10_AVANCE_2.pdf
@@ -297,7 +298,7 @@ Resultados: Relación entre variables de ventas.
 Contribución: Optimización de estrategias de marketing y promociones.
 Este análisis integral apoya la toma de decisiones estratégicas, mejora la planificación y aumenta la eficiencia operativa.
 
-###################################################################
+#######################################################################################################
 
 6. CREACIÓN DE DASHBOARD
 
