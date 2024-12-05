@@ -25,7 +25,7 @@ Modelo Predictivo (Opcional).
 Reporte y Presentación.
 El objetivo final es proporcionar estrategias basadas en datos para mejorar las ventas del cliente.
 
-Toda la información recopilada para el entregable No. 1, procedimientos, scripts y demas datos referentes al dimiensionamiento del analisis y solucion de requerimientos han sido plasmados en el documento PROYECTO_RSM_KODIGO_DAJ10.pdf
+Toda la información recopilada para el entregable No. 1, procedimientos, scripts y demas datos referentes al dimiensionamiento del analisis y solucion de requerimientos han sido plasmados en el documento ANALISIS_RSM_KODIGO_DAJ10_AVANCE_1.pdf
 https://github.com/hral-work/PROYECTO_RSM-KODIGO_DAJ10/blob/main/ANALISIS_RSM_KODIGO_DAJ10_AVANCE_1.pdf
 
 #######################################################################################################
@@ -176,7 +176,7 @@ Nota: Para el script de Productos Más Vendidos por Región, se tomo en consider
 #######################################################################################################
 #######################################################################################################
 
-Toda la información recopilada para el entregable No. 2, procedimientos, scripts y demas datos referentes al dimiensionamiento del analisis y solucion de requerimientos han sido plasmados en el documento PROYECTO_RSM_KODIGO_DAJ10.pdf
+Toda la información recopilada para el entregable No. 2, procedimientos, scripts y demas datos referentes al dimiensionamiento del analisis y solucion de requerimientos han sido plasmados en el documento ANALISIS_RSM_KODIGO_DAJ10_AVANCE_2.pdf
 https://github.com/hral-work/PROYECTO_RSM-KODIGO_DAJ10/blob/main/ANALISIS_RSM_KODIGO_DAJ10_AVANCE_2.pdf
 
 5. ANALISIS EXPLORATORIO DE DATOS
