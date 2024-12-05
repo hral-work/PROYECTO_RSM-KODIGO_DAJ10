@@ -311,41 +311,32 @@ Importar Datos a Power BI: Cargar los datos procesados para utilizarlos en el da
 Resumen de KPIs Clave: Crear un panel de control con indicadores clave de rendimiento para una visión rápida del negocio.
 Gráficos de Tendencias de Ventas: Visualizar las tendencias de ventas a lo largo del tiempo para identificar patrones.
 
-Paso 1: Importar Datos a Power BI
-En esta etapa, estamos cargando los datos procesados en Power BI para que podamos usarlos en nuestras visualizaciones.
-Lo primero que se realiza es abrir Power BI Desktop para la creación de los Dashboard
-Seleccionar en la ventana de inicio, “Obtener datos” para este caso se realiza directamente con la Base de datos de SQLServer.
-Se establecen las credenciales definidas en esa base de datos, se buscan las tablas de clientes, productos y ventas cargados anteriormente.
-Se finaliza con transformar datos en Power BI.
+Procedimiento:
 
-Paso 2: Desarrollar un Resumen de KPIs Clave
-Aquí, estamos creando un panel de control con indicadores clave de rendimiento (KPIs) que proporcionan una visión rápida del rendimiento del negocio.
-Se procede a realizar la creación de los KPIs según los requerimientos que se necesitan en el proyecto.
-Ventas Totales: Usa una medida que sume la cantidad vendida.
-Número de Transacciones: Cuenta el número total de ventas.
-Clientes Únicos: Cuenta el número distinto de clientes.
-Paso 3: Implementar Gráficos de Tendencias de Ventas
-Se realizan gráficos de tendencias, en donde se mostrará las ventas a lo largo del tiempo.
-Agrega el campo de fecha al eje x y la cantidad de ventas al eje y.
-Segmentar los gráficos por diferentes criterios como producto o región usando filtros.
-Visualizaciones de segmentación para permitir a los usuarios filtrar los datos por criterios diferentes.
+1. Importar Datos a Power BI:
+   - Cargar datos desde SQLServer.
+   - Transformar datos en Power BI.
 
-Explicación: Estos gráficos de líneas nos ayudan a visualizar las tendencias de ventas a lo largo del tiempo, identificando patrones y estacionalidades.
+2. Resumen de KPIs Clave:
+   - Crear panel de control con KPIs.
+   - Ventas Totales
+   - Número de Transacciones
+   - Clientes Únicos
 
-Resumen de Resultados y Análisis de Insights
+3. Gráficos de Tendencias de Ventas:
+   - Visualizar tendencias de ventas.
+   - Utilizar filtros por producto o región.
 
-Descripción de los datos graficados.
-KPIs Clave: Proporcionan una visión rápida del rendimiento del negocio, permitiendo a los directivos tomar decisiones informadas basadas en los principales indicadores.
-Gráficos de Tendencias: Ayudan a identificar patrones y fluctuaciones en las ventas a lo largo del tiempo, facilitando la planificación de inventarios y estrategias de marketing.
-Breve explicación de las visualizaciones.
-Gráfico de Líneas: La tendencia de ventas revela patrones estacionales y fluctuaciones en las ventas a lo largo del tiempo.
-TreeMap: Muestra una representación visual de las ventas totales por categoría la cual permite identificar patrones y valores atípicos según el tamaño y color de los rectángulos.
-Gráfico Circular: Muestra el porcentaje de ingreso por ventas según la región.
-Gráfico de Barras: Las ventas totales por categoría de producto agrupadas por año,  muestran qué categorías tienen el mayor volumen de ventas y permiten una rápida comparación visual respecto a los años anteriores y posteriores.
-Matriz: Muestra el detalle de las ventas por región y año permitiendo hacer drill down a categoría de producto y producto específico.
-Insights Clave
-Identificación de Productos y Categorías Populares: Conocer qué productos y categorías tienen mayores ventas permite enfocar esfuerzos en mantener un inventario óptimo y dirigir las promociones hacia esos productos.
-Análisis de Tendencias: Identificar patrones estacionales y tendencias en las ventas diarias facilita una mejor planificación y gestión del inventario, así como el diseño de campañas de marketing más efectivas.
-Segmentación y Fidelización de Clientes: Entender el comportamiento de compra de los clientes ayuda a segmentarlos eficazmente, permitiendo personalizar estrategias de retención y aumentar la fidelización.
-Optimización de Precios y Promociones: Analizar la distribución de ventas por producto y la correlación entre variables puede influir en las decisiones de precios y estrategias promocionales, mejorando la eficiencia y efectividad.
-Estos insights proporcionan una base sólida para tomar decisiones estratégicas informadas, optimizar operaciones y mejorar la satisfacción del cliente, impulsando así el rendimiento general del negocio. 
+Resultados y Análisis de Insights:
+
+- KPIs Clave: Visión rápida del rendimiento del negocio.
+- Gráficos de Tendencias: Identificación de patrones y fluctuaciones en ventas.
+
+Visualizaciones:
+- Gráfico de Líneas, TreeMap, Gráfico Circular, Gráfico de Barras y Matriz.
+
+Insights Clave:
+- Identificación de productos y categorías populares.
+- Análisis de tendencias.
+- Segmentación y fidelización de clientes.
+- Optimización de precios y promociones.
