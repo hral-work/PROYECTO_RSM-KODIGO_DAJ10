@@ -335,3 +335,17 @@ Insights Clave:
 - Análisis de tendencias.
 - Segmentación y fidelización de clientes.
 - Optimización de precios y promociones.
+
+#######################################################################################################
+
+7. CONCLUSIONES SOBRE EL PROYECTO Y ANALISIS EJECUTADO.
+   
+- Es fundamental entender la organización y las reglas de negocio que gobiernan los datos, asegurando que todos los elementos necesarios están definidos y correctamente interrelacionados.
+- Analizar a los clientes es crucial para desarrollar estrategias de fidelización y personalización de ofertas que puedan incrementar la lealtad y el valor del cliente a largo plazo.
+- Conocer los productos más vendidos por región es una información que permite optimizar la distribución y el marketing de productos, garantizando que el inventario se adapte a las preferencias regionales y potenciando las ventas.
+- Tener una comprensión clara del proceso ayuda a garantizar la precisión y eficiencia de los análisis realizados, facilitando la identificación de áreas de mejora y optimización.
+- Los resultados permiten tomar decisiones informadas, alineando las estrategias de negocio con las tendencias y comportamientos observados en los datos.
+- Los dashboards interactivos facilitan la toma de decisiones rápidas y basadas en datos, mejorando la transparencia y accesibilidad de la información.
+- La capacidad de extraer insights clave de los datos es esencial para impulsar la innovación y mantener la competitividad en el mercado. Las visualizaciones bien diseñadas ayudan a comunicar estos insights de manera clara y efectiva.
+
+El documento entregable oficial terminado se encuentra en la siguiente ruta: https://github.com/hral-work/PROYECTO_RSM-KODIGO_DAJ10/blob/main/ANALISIS_RSM_KODIGO_DAJ10_ENTREGABLE_OFICIAL.pdf
